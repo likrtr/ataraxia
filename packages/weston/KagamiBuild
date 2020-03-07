@@ -6,7 +6,7 @@
 
 name=weston
 version=8.0.0
-release=1
+release=2
 source=("https://wayland.freedesktop.org/releases/$name-$version.tar.xz")
 
 build() {
@@ -16,7 +16,6 @@ build() {
 
 	ataraxia-meson "$SRC"/$name-$version \
 		-Dbackend-rdp=false \
-		-Dlauncher-logind=false \
 		-Dpipewire=false \
 		-Dremoting=false \
 		-Dsimple-dmabuf-drm=auto \

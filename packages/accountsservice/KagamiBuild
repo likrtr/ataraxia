@@ -6,7 +6,7 @@
 
 name=accountsservice
 version=0.6.55
-release=1
+release=2
 source=("https://www.freedesktop.org/software/$name/$name-$version.tar.xz")
 
 build() {
@@ -21,8 +21,7 @@ build() {
 	ataraxia-meson "$SRC"/$name-$version \
 		-Dadmin_group=wheel \
 		-Ddocbook=false \
-		-Delogind=false \
-		-Dsystemd=false \
+		-Delogind=true \
 		-Dsystemdsystemunitdir=no
 	ninja
 	DESTDIR="$PKG" ninja install
